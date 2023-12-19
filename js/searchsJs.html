@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="input" />
+    <button onclick="add()">ok</button>
+    <div id="div" style="font-size: 20px;"></div>
+    <script>
+        	let Telefon = [
+			{
+				name: 'Samsung',
+				text: 'Samsung text',
+				price: '30000',
+			},
+			{
+				name: 'Nokia',
+				text: 'Nokia text',
+				price: '25000',
+			},
+			{
+				name: 'Honor',
+				text: 'Honor text',
+				price: '35000',
+			},
+
+		]
+
+	let div = document.getElementById('div');
+	let input = document.getElementById('input')
+
+
+	function add(){
+		div.innerHTML = ''
+		Telefon.map(r => {
+			let vv = input.value
+			if (r.name.includes(vv) && vv.length > 0) {
+				div.innerHTML +=
+					`<div>
+							<div>1: ${r.name}</div>
+							<div>2: ${r.text}</div>
+							<div>3: ${r.price} </div>
+					 	</div>`
+			}
+		})
+	}
+	
+	</script>
+</body>
+
+</html>

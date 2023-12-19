@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <style type="text/css">
+    .container {
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+      box-shadow: 0 0 5px grey;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .header {
+      padding: 8px;
+      background-color: #2e7d32;
+      position: relative;
+    }
+
+    h1.logo {
+      margin: 8px;
+      color: white;
+      display: inline-block;
+      margin-left: 0;
+    }
+
+    .navbar {
+      display: inline-block;
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .navbar > a {
+      color: white;
+      text-decoration: none;
+      margin-left: 8px;
+    }
+
+    .content {
+      padding: 10px;
+    }
+
+    .product {
+      width: 300px;
+      margin-right: auto;
+      margin-left: auto;
+      box-shadow: 0px 0px 3px #808080;
+      border-radius: 20px;
+    }
+
+    .product > .image {
+      width: 100%;
+      height: 300px;
+      background-position: center;
+      background-size: contain;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product > .title {
+      padding: 8px;
+      color: #37474f;
+      padding-bottom: 0;
+      margin: 0;
+    }
+
+    .product > .price {
+      padding: 8px;
+      font-size: 28px;
+      display: inline-block;
+      color: #1b5e20;
+    }
+
+    .discount {
+      color: #b71c1c;
+      font-size: 20px;
+    }
+
+    button {
+      border: none;
+      background-color: #2e7d32;
+      color: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      width: 100%;
+    }
+
+    .button {
+      padding: 10px;
+      padding-top: 0px;
+    }
+
+    .favorite {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      color: #2e7d32;
+    }
+
+    .stock {
+      width: 90px;
+      transform: rotate(-45deg);
+      text-align: center;
+      left: -40px;
+      top: 15px;
+      background-color: #f44336;
+      color: white;
+      padding: 5px 30px;
+      box-shadow: 0px 0px 3px grey;
+      position: absolute;
+    }
+  </style>
+  <title>Интернет магазин Besoft Market</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="logo">Besoft Market</h1>
+      <div class="navbar">
+        <a href="#">
+          <i class="fa fa-home fa-fw"></i> Главная
+        </a>
+        <a href="#">
+          <i class="fa fa-heart fa-fw"></i> Избранное
+        </a>
+        <a href="#">
+          <i class="fa fa-percent fa-fw"></i> Скидки
+        </a>
+        <a href="#">
+          <i class="fa fa-shopping-basket fa-fw"></i> Корзина
+        </a>
+      </div>
+    </div>
+    <div class="content">
+      <div class="product">
+        <div style="background-image: url(https://detki.kg/image/products/3041/intrique_lite_way.jpg/256/320);" class="image">
+          <div class="favorite">
+            <i class="fa fa-lg fa-heart-o"></i>
+          </div>
+          <div class="stock">Акция!</div>
+        </div>
+        <p class="title">Коляска прогулочная Carrello Bravo CRL-8512 Basil Green  / CARRELLO  / ДЕТСКИЕ КОЛЯСКИ</p>
+        <strong class="price">
+          17 900 <u>с</u>
+          <s class="discount">21 500 <u>с</u></s>
+        </strong>
+        <div class="button">
+          <button><i class="fa fa-plus fa-fw"></i> Добавить в корзину</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

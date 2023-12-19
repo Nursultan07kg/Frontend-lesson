@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Caveat|Comfortaa|Lobster|Montserrat|Pacifico|Roboto&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body, html {
+			height: 100%;
+		}
+
+		body {
+			position: relative;
+		}
+
+		div {
+			border-radius: 20px;
+			background-color: rgba(255, 255, 255, .7);
+			font-size: 20px;
+			padding: 10px;
+			position: absolute;
+			bottom: 50px;
+		}
+
+		.font {
+			left: 50px;
+		}
+
+		.bg {
+			right: 50px;
+		}
+
+		.t {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			color: white;
+			font-size: 50px;
+			transform: translate(-50%, -50%);
+		}
+	</style>
+</head>
+<body>
+	<div id="font" class="font"></div>
+	<div id="bg" class="bg"></div>
+	<span id="text" class="t"></span>
+	<script type="text/javascript">
+		let font_i = 0;
+		let bg_i = 0;
+
+		const colors = ['blue', 'orange', 'yellow', 'red', 'black', 'green'];
+		const fonts = [`'Roboto', sans-serif`, `'Montserrat', sans-serif`, `'Lobster', cursive`, `'Comfortaa', cursive`, `'Pacifico', cursive`, `'Caveat', cursive`];
+
+
+		const text = document.getElementById('text');
+		const bg = document.getElementById('bg');
+		const font = document.getElementById('font');
+
+		document.body.style.background = colors[bg_i];
+		text.style.fontFamily = fonts[font_i];
+
+		text.innerText = prompt('Text?');
+
+		bg.innerText = colors[bg_i];
+		font.innerText = fonts[font_i];
+
+		text.onclick = function() {
+			text.innerText = prompt('Text?', text.innerText);
+		}
+
+		bg.onclick = function() {
+			bg_i++;
+			if (bg_i >= colors.length) bg_i = 0;
+			bg.innerText = colors[bg_i];
+			document.body.style.background = colors[bg_i];
+		}
+
+		font.onclick = function() {
+			font_i++;
+			if (font_i >= fonts.length) font_i = 0;
+			font.innerText = fonts[font_i];
+			text.style.fontFamily = fonts[font_i];
+		}
+	</script>
+</body>
+</html>

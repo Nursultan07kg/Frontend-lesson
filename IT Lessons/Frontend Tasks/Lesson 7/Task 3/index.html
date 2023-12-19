@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Electrolize&display=swap" rel="stylesheet">
+	<style type="text/css">
+		.traffic-light {
+			background-color: black;
+			padding: 10px;
+			width: 100px;
+			height: 300px;
+			float: left;
+			margin: 20px;
+			border-radius: 5px;
+		}
+		.light {
+			margin: 5px;
+			width: 90px;
+			height: 90px;
+			border: 1px solid white;
+			border-radius: 100%;
+		}
+		.red {
+			background-color: red;
+		}
+		.green {
+			background-color: green;
+		}
+		.yellow {
+			background-color: yellow;
+			position: relative;
+		}
+		.yellow > span {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 65px;
+			font-family: 'Electrolize', sans-serif;
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+	<div class="traffic-light">
+		<div class="light red"></div>
+		<div class="light yellow">
+			<span>10</span>
+		</div>
+		<div class="light green"></div>
+	</div>
+	<div class="traffic-light">
+		<div class="light red"></div>
+		<div class="light yellow">
+			<span>15</span>
+		</div>
+		<div class="light green"></div>
+	</div>
+</body>
+</html>

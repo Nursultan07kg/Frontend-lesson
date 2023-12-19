@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		@keyframes mymove {
+			from {
+				opacity: 0;
+				top: 80%;
+			}
+
+			to {
+				opacity: 1;
+				top: 50%;
+			}
+		}
+
+		body, html {
+			height: 100%;
+		}
+
+		body {
+			background-image: url(https://upload.wikimedia.org/wikipedia/commons/4/42/Shaqi_jrvej.jpg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: auto;
+			height: 100%;
+			width: 100%;
+			position: relative;
+		}
+
+		.text {
+			animation-name: mymove;
+			animation-duration: 2s;
+			animation-delay: 1s;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			opacity: 1;
+			text-shadow: 5px 5px 10px black;
+			font-size: 64px;
+			color: white;
+			position: absolute;
+			top: 80%;
+			left: 50%;
+			opacity: 0;
+			transform: translate(-50%, -50%);
+		}
+	</style>
+</head>
+<body>
+	<div class="text">Hello World</div>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="div" style="position: absolute; font-size: 50px; color: green; top:50%; left: 50%; transform: translate(-50%, -50%);">
+		
+	</div>    
+
+	<script>
+		let div = document.getElementById('div');
+		
+		let body_ = document.body;
+
+		body_.onkeyup = (e) => {
+			if(e.keyCode == 32){
+				div.innerHTML = '';
+			}
+		}
+
+		body_.onkeydown = (e) => {
+				div.innerHTML = 'Hello';
+			}
+
+
+		
+		
+
+		
+		// let name = ''
+		// function add(){
+		// let name_= input.value
+		// input.value = ''
+		// let b = name_[0].toLocaleUpperCase()
+		// 	for(let i = 1; i < name_.length; i++){
+		// 		b += name_[i]		
+		// 	}
+		// 	name += b
+		// 	dd()
+		// }
+
+		// function dd(){
+		// 	div.innerHTML += ''
+		// 	name.map(v => {
+		// 		div.innerHTML += `<div>${v}</div>`
+		// 	})
+		// }
+		// dd();
+
+
+
+		// console.log('Bekbolsun'.charAt(4)) // вернёт "о"
+
+
+		// var orig = '   foo foo     ';
+		// 	console.log(orig.trim()); // 'foo foo'
+
+
+
+
+			// var str = '   foo foo ';
+
+
+			// 	str = str.trimRight();
+			// 	console.log(str); // '   foo foo'
+
+
+			// 	var str_ = '   foo foo  ';
+
+			// 		str_ = str.trimLeft();
+
+			// 		console.log(str_); // 'foo foo   '
+
+		// function add_(){
+		// 	name.sort().map((v) => {
+		// 		div.innerHTML += `<div>${v}</div>`
+		// 	})
+		// }
+		// add_();
+		// function add() {
+		// 	let push_ = false;
+		// 	let len = name.length;
+		// 	let in_ = input.value
+		// 		input.value = ''
+		// 		div.innerHTML = ''
+		// 	name.map((v, i) => {
+		// 		if (in_[0] == v[0]) {
+		// 			name.splice(i, 1, in_)
+		// 			push_ = true;
+		// 		}
+		// 	})
+		// 	if (!push_) {
+		// 		name.splice(len, 1, in_)
+		// 	}
+		// 	add_()
+		// }
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// let asan = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
+	// asan.splice(3, 1, 'name');
+
+	// console.log(asan)
+
+
+
+
+
+
+
+
+
+
+		// let	numbers = ['kairat', 'adi', 'nar', 'munara',];
+
+		// 	let s = numbers.sort(); // [1, 200, 40, 5]
+		// 	 console.log(s)
+
+
+		// 	let d= 	numbers.sort((s, v) => s - v); // [ 1, 5, 40, 200 ]
+
+		// 				console.log(d)
+
+
+
+
+
+
+
+
+
+
+	// var asan = ['sdkvjbdf', 'jhdscvhjbskan', 10, 'jhdscvhjbskan'];
+		
+
+	// 	var myVar3 = asan.join(', ');
+	// 	console.log(myVar3)
+
+
+
+			// let text = 'АЛФАВИТ';
+
+
+			// div.innerHTML = text.toLocaleLowerCase() // 'алфавит'
+
+			// let text_ = 'алфавит';
+
+			// div.innerHTML = text_.toLocaleUpperCase() // 'АЛФАВИТ'
+
+
+	// var asan = '0123456';
+
+	// // Отобразит 'Moz'
+	// console.log(asan.substring(1, 3));
+	// console.log(asan.substring(3,9));
+
+
+
+	// var str = 'Быть или  не быть вот в чём вопрос.';
+ 
+	// console.log(str.includes('  '))
+
+
+	// let Telefon = [
+	// 		{
+	// 			name: 'Samsung',
+	// 			text: 'Samsung text',
+	// 			price: '30000',
+	// 		},
+	// 		{
+	// 			name: 'Nokia',
+	// 			text: 'Nokia text',
+	// 			price: '25000',
+	// 		},
+	// 		{
+	// 			name: 'Honor',
+	// 			text: 'Honor text',
+	// 			price: '15000',
+	// 		},
+
+	// 	]
+
+
+	// let div = document.getElementById('div');
+	// let input = document.getElementById('input')
+
+
+	// function add(){
+	// 	div.innerHTML = ''
+	// 	Telefon.map(r => {
+	// 		let vv = input.value
+	// 		if (r.name.includes(vv) && vv.length > 0) {
+	// 			div.innerHTML +=
+	// 				`<div>
+	// 						<div>1: ${r.name}</div>
+	// 						<div>2: ${r.text}</div>
+	// 						<div>3: ${r.price} </div>
+	// 				 	</div>`
+	// 		}else if()
+	// 	})
+	// }
+
+
+
+
+
+
+	  
+
+		
+	</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+</head>
+
+<body>
+	<div>
+		<button>Add new item</button>
+		<ul>
+			<li>Item 1</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		const button = document.body.children[0].children[0];
+		const ul = document.body.children[0].children[1];
+		let i = 2;
+
+		button.onclick = function () {
+			ul.innerHTML = `${ul.innerHTML}<li>Item ${i}</li>`;
+			i++;
+		}
+	</script>
+</body>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+<!-- 	let a = [10,9,1,5,9,];
+	let s = a[0];
+	let d = a[0];
+	let b = 0;
+	let m = 0;
+
+	for(let v = 1; v <= a.length; v++){
+
+	  if(s < a[v - 1] == false){
+	    s = a[v - 1];
+	    b = a[v - 1];
+	  }
+
+	  if((d > a[v - 1]) == false){
+	        m = a[v - 1];
+	        d = a[v - 1];
+	      }
+
+	      alert(v + 'for v, s' + s + " m"+m + ', a' + a.length)
+	  
+	}
+	alert(m - b); -->

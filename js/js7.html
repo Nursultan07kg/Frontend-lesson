@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		const api = 3232
+		let api_kod = prompt("pin kod jazynyz")
+
+		if (api_kod == api) {
+			alert('sixdin akcha ' + 10000 + "som bar")
+			let price = +prompt("kancha akcha alasyz")
+			let prices = price * 5 / 100;
+			if (price < 10000) {
+				let shot = ((10000 - price) -prices)
+				alert(shot + "com kaldy")
+			}else if(price >= 10000){
+				alert("akchanyz jetpeit")
+			}
+		}else{
+			alert('pin kodtu kata jazdynyz')
+		}
+	</script>
+</body>
+</html>

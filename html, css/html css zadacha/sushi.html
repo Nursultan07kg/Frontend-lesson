@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style >
+		.menu_1{
+			cursor: pointer;
+			margin: 0px;
+			padding-top: 20px;
+			display: inline-block;
+			width:200px;
+			height: 40px;
+			font-size: 22px;
+			border: 1px solid ;
+		}
+		.menu_1:hover{
+			background-color: grey;
+			color: white;
+			border-color: white;
+		}
+		.product{
+			margin: 20px;
+		}
+		.card{
+			margin: 10px;
+			width: 300px;
+			height: 400px;
+			border: 1px solid;
+		}
+		.card_img{
+			background-image: url(https://static.1000.menu/img/content-v2/08/f3/21103/picca-v-duxovke-s-kolbasoi-i-syrom_1616655833_29_max.jpg);
+			background-size: cover;
+			background-position: center;
+			width: 200px;
+			height: 170px;
+			border: 1px solid;
+			margin-top: 20px;
+		}
+		.card_header{
+			margin-left: -20px;
+			display: inline-block;
+			padding-left: 20px;
+			border-left: 5px solid red;
+		}
+		.card_des{
+			margin-top: -10px;
+			display: inline-block;
+			padding-left: 20px;
+			border-left: 5px solid grey;
+		}
+		.card_footer{
+			padding: 0px 30px;
+			font-size: 22px;
+			margin-top: 40px;
+		}
+		.curr{
+			margin-left: 60px;
+			display: inline-block;
+		}
+		.card_button{
+			margin-left: 20px;
+			padding: 5px 10px ;
+			border-radius: 10px;
+			background-color: seagreen;
+		}
+		.banner{
+			margin: 10px;
+			background-image: url(https://kidpassage.com/images/publications/eda-kemere-chto-poprobovat-skolko-stoit/eda-kemere-chto-poprobovat-skolko-stoit-photo1_899275124.jpg);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			width: 90%;
+			height: 500px;
+			border: 1px solid grey;
+		}
+		.navbar{
+			position: relative;
+			padding: 5px 30px;
+			width: 94%;
+			height: 50px;
+			background-color: white;
+			border: 1px solid;
+		}
+		.btn_menu{
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+		}
+		.btn_span{
+			transition: 0.2s;
+			width: 50px;
+			height: 10px;
+			background-color: red;
+			display: inline-block;
+		}
+		.btn_menu:active ._2{
+			display: none;
+		}
+		.btn_menu:active ._1{
+			transform: translateY(18px) rotate(45deg);
+		}
+		.btn_menu:active ._3{
+			transform:  rotate(-45deg);
+		}
+		.search{
+			padding-left: 10px;
+			color: white;
+			position: absolute;
+			top: 5px;
+			display: inline-block;
+			background-color: wheat;
+			width: 400px;
+			height: 45px;
+			margin-left: 130px;
+		}
+		.btn_search{
+			position: absolute;
+			left: 640px;
+			top: 5px;
+			width: 50px;
+			height: 50px ;
+			border: 1px solid grey;
+			background-color: wheat;
+		}
+		.sign{
+			position: absolute;
+			right: 10px;
+			top: 8px;
+			font-size: 18px;
+			padding: 10px 30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="navbar">
+			<div class="btn_menu">
+				<span  class="btn_span _1"></span>
+				<span class="btn_span _2"></span>
+				<span class="btn_span _3"></span>
+			</div>
+			<input type="txt" placeholder="Поиск" class="search" />
+			<div class="btn_search"></div>
+			<button class="sign">Войти</button>
+	</div>
+	<div align="center">
+		<div class="banner">
+		</div>
+		<div class="menu">
+			<div class="menu_1">Меню</div>
+			<div class="menu_1">Информация</div>
+			<div class="menu_1">Отзывы</div>
+		</div>
+
+		<div class="product" align="center">
+			<div class="card">
+				<div class="card_img"></div>
+				<h2 class="card_header"> Пицца пепперони </h2>
+				<p class="card_des">Колбаса пепперони, сыр чеддер </p>
+				<div align="start" class="card_footer"> 
+					<span>0 c</span>
+					<div class="curr">
+						<span>-</span>
+						<span>1</span>
+						<span>+</span>
+					</div>
+					<button class="card_button">заказать</button>
+				</div>
+			</div> 
+		</div>
+	</div>
+</body>
+</html>

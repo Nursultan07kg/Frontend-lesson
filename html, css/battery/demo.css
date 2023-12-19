@@ -1,0 +1,28 @@
+.battery-container {
+	width: 250px;
+	height: 150px;
+	border: 5px solid black;
+	position: relative;
+}
+
+.battery-right {
+	position: absolute;
+	right: -20px;
+	background-color: black;
+	width: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 100px;
+}
+
+.battery-content {
+	padding: 10px;
+}
+
+.battery-content div {
+	width: 64px;
+	height: 120px;
+	display: inline-block;
+	background-color: black;
+	border: 5px solid green;
+}

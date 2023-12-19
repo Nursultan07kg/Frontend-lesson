@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		let som = +prompt('Som?');
+		let c = 0;
+
+		c = (som - (som % 10));
+		som = som - c;
+		console.log('10: ' + (c / 10));
+
+		c = (som - (som % 5));
+		som = som - c;
+		console.log('5: ' + (c / 5));
+
+		c = (som - (som % 3));
+		som = som - c;
+		console.log('3: ' + (c / 3));
+
+		console.log('1: ' + som);
+	</script>
+</body>
+</html>

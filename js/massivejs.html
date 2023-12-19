@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+let fruits = [6,36,42,1];
+
+let number = fruits[0];
+let number1 = fruits[0];
+
+for(let i = 0; fruits.length > i; i++ ){
+		 if (fruits[i] > number) {
+		 	number = fruits[i];
+
+		 	for(let s = 0; s <= i; s++){
+		 		if (fruits[s] < number1){
+		 			number1 = fruits[s]
+		 		}
+		 	}
+		 }
+		 
+	}
+			alert(number - number1)
+
+
+
+
+
+// 			let fruits = [1, 2, 3, 2, 5, 1, 9];
+
+// let number = fruits[0];
+
+// for(let i = 0; fruits.length > i; i++ ){
+// 		 if (fruits[i] < number) {
+// 		 	number = fruits[i]
+// 		 }
+// 	}
+
+</script>
+</body>
+</html>

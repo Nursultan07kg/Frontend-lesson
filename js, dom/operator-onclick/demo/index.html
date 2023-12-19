@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+		<input type="text"> <button>Check</button>
+	</div>
+	<img src="" style="margin: 10px; width: 300px;">
+
+	
+	<script type="text/javascript">
+		const input = document.getElementsByTagName('input')[0];
+		const img = document.getElementsByTagName('img')[0];
+		const button = document.getElementsByTagName('button')[0];
+		const images = {
+			megacom: 'https://www.megacom.kg/uploads/ckeditor/pictures/1665/content_ru_%D0%98%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8.png',
+			beeline: 'https://www.akchabar.kg/media/news/7a4f4470-14f6-4dd1-8b7f-7061c9f7a4b3.jpg',
+			o: 'http://video.o.kg/image/logo.png',
+		};
+
+		const check = function(s) {
+			if (s >= 770 && s <= 779) {
+				return 'beeline';
+			}
+			if (s >= 550 && s <= 559) {
+				return 'megacom';
+			}
+			if (s >= 700 && s <= 709) {
+				return 'o';
+			}
+		};
+
+		button.onclick = function() {
+			const b = check(input.value.substr(1, 3));
+			if (b) img.src = images[b];
+			else alert('error');
+		};
+	</script>
+</body>
+</html>

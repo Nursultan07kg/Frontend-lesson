@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body style="cursor: pointer;
+background-color: #b9b7b9">
+  <h1 style="font-size: 40px; text-align: center;
+  color: blue;">Facebook</h1>
+  <h1 id='welcome' style="font-size: 80px; text-align: center;
+  color: green; display: none;">
+    Welcome!
+  </h1>
+  <div id="div1" align="center">
+      <div style="width: 600px; height: 70px;
+        background-color: #fff;
+        color: #6E7F80;
+        border-bottom:solid 1px black">
+        <b style="color: black; font-size: 30px;">Создать аккаунт</b> <br>
+        Быстро и легко
+      </div>
+      <div style="width: 600px; height: 800px;
+        background-color: #fff;">
+        <div>
+            <input id="e" style="width: 568px; height: 50px; margin: 10px;" type="email" placeholder="Номер мобильного телефон или эл.адрес">
+            <input id="p" style="width: 568px;height: 50px; margin: 10px;" type="password" placeholder="Новый пароль">
+            <div id="div2" style="color: red; margin-bottom: 10px; display: none;">
+              The password you’ve entered is incorrect. Forgot Password?
+            </div>
+            <button onclick="add()">
+                  log in
+            </button> 
+            <br>
+          </div>
+        </div>
+    </div>
+
+        <script>
+           let e = document.getElementById('e')
+            let p = document.getElementById('p')
+            let div = document.getElementById('div1')
+            let div2 = document.getElementById('div2')
+            let welcome = document.getElementById('welcome')
+          let text = '';
+          let porol = '';
+
+          e.oninput = (event) => {
+            text = event.target.value
+          }
+
+          p.oninput = (event) => {
+              porol = event.target.value
+            }
+
+            function add(params) {
+              if (porol == 123 && text == 'adi') {
+                div.style.display = 'none'
+                welcome.style.display = 'block'
+              } else {
+                  e.style.borderColor = 'red'
+                  p.style.borderColor = 'red'
+                  e.style.color = 'red'
+                  p.style.color = 'red'
+                  div2.style.display = 'block'
+              }
+            }
+        
+        </script>
+        </body>
+        </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		h1 {
+			text-align: center;
+		}
+
+		body {
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<h1>Hello Besoft Teach</h1>
+	<script type="text/javascript">
+		const h1 = document.getElementsByTagName('h1')[0];
+		const COLORS = ['red', 'black', 'blue', 'yellow'];
+		let i = 0;
+		setInterval(() => {
+			h1.style.color = COLORS[i];
+			i++;
+			if (i === 4) i = 0;
+		}, 500);
+	</script>
+</body>
+</html>

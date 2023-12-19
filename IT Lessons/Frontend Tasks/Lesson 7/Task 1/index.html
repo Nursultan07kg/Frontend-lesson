@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		@keyframes mymove {
+			0% {
+				background-color: red;
+				border-radius: 100%;
+				border-top-left-radius: 0%;
+			}
+			25% {
+				background-color: green;
+				border-radius: 100%;
+				border-top-right-radius: 0%;
+			}
+			50% {
+				background-color: orange;
+				border-radius: 100%;
+				border-bottom-right-radius: 0%;
+			}
+			75% {
+				border-radius: 100%;
+				background-color: black;
+				border-bottom-left-radius: 0%;
+			}
+			100% {
+				border-radius: 100%;
+				background-color: red;
+				border-top-left-radius: 0%;
+			}
+		}
+
+		div {
+			width: 500px;
+			height: 500px;
+			background-color: red;
+			animation-name: mymove;
+			animation-duration: 2s;
+			border-radius: 100%;
+			animation-iteration-count: infinite;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

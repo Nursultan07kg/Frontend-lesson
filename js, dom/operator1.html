@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>My website</title>
+	<style type="text/css">
+		.center {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			color: white;
+			transform: translate(-50%, -50%);
+			font-size: 50px; text-align: center;
+			width: 500px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<img src="https://www.megacom.kg/uploads/ckeditor/pictures/1665/content_ru_%D0%98%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8.png" class="center" />
+	<img src="https://24.kg/files/media/93/93573.png" class="center" />
+	<img src="http://st-1.akipress.org/st_gallery/78/955878.4b08218e588365cf190ba200a5af3927.jpg" class="center" />
+	<img src="https://www.computerhope.com/jargon/e/error.png" class="center" />
+	<script type="text/javascript">
+		const pn = prompt('Phone number?');
+		const code = +(pn[1] + pn[2] + pn[3]);
+
+		if (
+			(code >= 770 && code <= 779) ||
+			(code >= 220 && code <= 229)
+		) {
+			document.body.children[2].style.display = 'inline'
+		} else if (
+			(code >= 550 && code <= 559) ||
+			code === 755 ||
+			code === 999
+		) {
+			document.body.children[0].style.display = 'inline'
+		} else if (
+			(code >= 700 && code <= 709) ||
+			(code >= 500 && code <= 509)
+		) {
+			document.body.children[1].style.display = 'inline'
+		} else {
+			document.body.children[3].style.display = 'inline'
+		}
+	</script>
+</body>
+</html>

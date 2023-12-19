@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="div" style="position: absolute; font-size: 50px; color: green; top:50%; left: 50%; transform: translate(-50%, -50%);">
+		
+	</div>
+
+	<script>
+		let div = document.getElementById('div');
+		
+		let body_ = document.body;
+
+		body_.onkeyup = (e) => {
+			if(e.keyCode == 32){
+				div.innerHTML = '';
+			}
+		}
+		body_.onkeydown = (e) => {
+				div.innerHTML = 'Hello';
+			}
+
+            </script>
+            </body>
+            
+            </html>

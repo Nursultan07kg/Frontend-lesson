@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style type="text/css">
+		.phone {
+			width: 270px;
+			padding: 25px 12px;
+			background-color: rgba(32, 32, 32, 0.9);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		.stories {
+			width: 270px;
+			height: 440px;
+			background-image: url(https://i.pinimg.com/originals/d6/03/16/d603160611b69e2ec9f018a8365efed6.jpg);
+			border-radius: 15px;
+			background-size: cover;
+			background-position: center;
+			display: flex;
+			transition: 1s;
+		}
+
+		.s {
+			width: 35%;
+			height: 5px;
+			position: absolute;
+			bottom: 10px;
+			border-radius: 5px;
+			background-color: lightgrey;
+		}
+		.wid {
+			width: 50%;
+			height: 100%;
+			padding-top: 10px;
+			display: flex;
+			justify-content: center;
+		}
+
+		.pol {
+			width: 90%;
+			height: 4px;
+			border-radius: 2px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.progress-line {
+			top: 0;
+			left: 0;
+			position: absolute;
+			height: 4px;
+			width: 0px;
+			background-color: lightgrey;
+		}
+
+		.anim-line {
+			animation-name: line;
+			animation-duration: 10s;
+			animation-timing-function: linear;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes line {
+			0% {
+				width: 0%;
+			}
+			100% {
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="phone">
+		<div id="srs" class="stories">
+			<div id="pre" class="wid">
+				<div id="panel" class="pol" style="background-color: grey;">
+					<div class="progress-line"></div>
+				</div>
+			</div>
+			<div id="nxt" class="wid">
+				<div id="panel2" class="pol" style="background-color: grey;">
+					<div class="progress-line"></div>
+				</div>
+			</div>
+		</div>
+		<div class="s"></div>
+	</div>
+
+	<script type="text/javascript">
+		const srs = document.getElementById('srs')
+		const prev = document.getElementById('pre')
+		const nxt = document.getElementById('nxt')
+		const pn1 = document.getElementById('panel')
+		const pn2 = document.getElementById('panel2')
+
+		let intval = -1
+
+		function prv() {
+			srs.style.backgroundImage = `url(https://i.pinimg.com/originals/d6/03/16/d603160611b69e2ec9f018a8365efed6.jpg)`
+			pn1.children[0].classList.add('anim-line')
+			pn2.children[0].classList.remove('anim-line')
+
+			intval = setTimeout(() => {
+				next()
+				intval = -1
+			}, 10000)
+		}
+		
+		function next() {
+			srs.style.backgroundImage = `url(https://i.pinimg.com/originals/13/e7/ae/13e7ae7ecdf19fa4aedfb7aa5439f58b.jpg)`
+			pn1.children[0].classList.remove('anim-line')
+			pn2.children[0].classList.add('anim-line')
+			pn1.children[0].style.width = '100%'
+			if (intval !== -1) {
+				clearInterval(intval)
+			}
+		}
+
+		srs.children[0].onclick = prv
+		srs.children[1].onclick = next
+
+		function start(n) {
+			((n === 1 ? prv : next)())
+		}
+
+		start(1)
+	</script>
+</body>
+</html>

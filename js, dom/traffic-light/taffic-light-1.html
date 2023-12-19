@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+	<style type="text/css">
+		span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 120px;
+			transition: 0.5s;
+			font-family: 'Electrolize', sans-serif;
+		}
+
+		.yellow {
+			border: 1px solid yellow;
+			width: 180px;
+			height: 180px;
+			background-color: yellow;
+			position: relative;
+			margin-top: 10px;
+			border-radius: 100%;
+		}
+
+		.yellow:hover > span {
+			font-size: 80px;
+		}
+	</style>
+</head>
+	<div style="display: flex; justify-content: center; margin-bottom: 50px;">
+		<div align="center" style="display: flex; margin-right: 50px;">
+			<div style="background-color: black;
+				width: 220px;
+				height: auto;
+				padding: 10px;
+				border-radius: 8px;
+			">
+				<div id="red1" style="border: 1px solid red; width: 180px; height: 180px; background-color: black; margin-top: 10px; border-radius: 100%">
+					
+				</div>
+				<div class="yellow">
+					<span>15</span>
+				</div>
+				<div id="green1" style="border: 1px solid green; width: 180px; height: 180px; background-color: green; margin-top: 10px; border-radius: 100%">
+					
+				</div>
+			</div>
+		</div>
+		<div align="center" style="display: flex;">
+			<div style="background-color: black;
+				width: 220px;
+				height: auto;
+				padding: 10px;
+				border-radius: 8px;
+			">
+				<div id="red2" style="border: 1px solid red; width: 180px; height: 180px; background-color: red; margin-top: 10px; border-radius: 100%">
+					
+				</div>
+				<div class="yellow">
+					<span>15</span>
+				</div>
+				<div id="green2" style="border: 1px solid green; width: 180px; height: 180px; background-color: black; margin-top: 10px; border-radius: 100%">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div style="display: flex; justify-content: center;">
+		<button id="switch" style="padding: 10px; border-radius: 40px;">Switch</button>
+	</div>
+
+	<script type="text/javascript">
+		const s = document.getElementById('switch')
+		s.onclick = sw
+
+		function sw() {
+			red1.style.backgroundColor = red1.style.backgroundColor === 'black' ? 'red' : 'black'
+			red2.style.backgroundColor = red1.style.backgroundColor === 'black' ? 'red' : 'black'
+			green1.style.backgroundColor = green1.style.backgroundColor === 'black' ? 'green' : 'black'
+			green2.style.backgroundColor = green2.style.backgroundColor === 'black' ? 'green' : 'black'
+		}
+	</script>
+
+	<script type="text/javascript">
+		// const CARDS = [
+		// 	{pin: '1234', balance: 5000},
+		// 	{pin: '4321', balance: 15000},
+		// 	{pin: '1111', balance: 25000},
+		// ];
+
+		// for (let p = 2; p >= 0; p--) {
+		// 	const PIN = prompt('Pin?');
+		// 	let found = null;
+
+		// 	for (let i = 0; i < CARDS.length; i++) {
+		// 		if (PIN === CARDS[i].pin) {
+		// 			found = CARDS[i];
+		// 		}
+		// 	}
+
+		// 	if (found === null) {
+		// 		if (p === 0) {
+		// 			console.log('Blocked!');
+		// 		} else {
+		// 			console.log('Incorrect! You have ' + p + ' attempt(s) left.');
+		// 		}
+		// 	} else {
+		// 		p = -1;
+		// 		let k = true;
+		// 		for (; k;) {
+		// 			const balance = +prompt('How much?');
+		// 			const total = balance + ((balance * 5) / 100);
+		// 			if (total > found.balance) {
+		// 				console.log('Not enough balance!');
+		// 			} else {
+		// 				found.balance = found.balance - total;
+		// 				console.log('Balance: ' + found.balance);
+		// 			}
+		// 			k = confirm('?');
+		// 		}
+		// 	}
+		// }
+	</script>
+</body>
+</html>

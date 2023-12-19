@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <h1>LocalStorage - Локальное хранилище</h1>
+  <p><input type="text" id="input"></p>
+  <p>
+    <button>Load data</button>
+    <button>Save data</button>
+  </p>
+  <script type="text/javascript">
+    const load_btn = document.getElementsByTagName('button')[0];
+    const save_btn = document.getElementsByTagName('button')[1];
+    const input = document.getElementById('input');
+
+    load_btn.onclick = function() {
+      input.value = localStorage.getItem('test');
+    }
+
+    save_btn.onclick = function() {
+      localStorage.setItem('test', input.value);
+    }
+  </script>
+</body>
+</html>

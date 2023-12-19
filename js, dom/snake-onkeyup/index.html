@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.container {
+			width: 700px;
+			height: 500px;
+			position: relative;
+			border: 1px solid red;
+		}
+
+		.box {
+			width: 50px;
+			position: absolute;
+			height: 50px;
+			top: 0px;
+			left: 0px;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box" id="box"></div>
+	</div>
+
+	<script type="text/javascript">
+		const box = document.getElementById('box');
+		let current = '';
+
+		let _top = 0;
+		let _left = 0;
+
+		document.body.onkeyup = (e) => {
+			current = e.key;
+		};
+
+		setInterval(() => {
+			if (current === 'ArrowRight') {
+				_left += 5;
+			} else if (current === 'ArrowLeft') {
+				_left -= 5;
+			} else if (current === 'ArrowUp') {
+				_top -= 5;
+			} else if (current === 'ArrowDown') {
+				_top += 5;
+			}
+
+			if (_top > 450) {
+				_top = 0;
+			} else if (_left > 650) {
+				_left = 0;
+			} else if (_left < 0) {
+				_left = 650;
+			} else if (_top < 0) {
+				_top = 450;
+			}
+
+			box.style.left = `${_left}px`;
+			box.style.top = `${_top}px`;
+		}, 50);
+	</script>
+</body>
+</html>

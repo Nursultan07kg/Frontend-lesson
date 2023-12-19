@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Timer</title>
+</head>
+<body style="background-color: red;">
+  <div id="a" style="text-align: center; font-size: 150px;">00:00</div>
+  <script type="text/javascript">
+    const a = document.getElementById('a');
+    let id = 0;
+    let time = 0;
+
+    function render() {
+    	const _b = time % 60;
+    	const _c = (time - (time % 60)) / 60;
+
+    	const b = ``;
+    	const c = ``;
+    	a.innerText = `${_c < 10 ? '0' : ''}${_c}:${_b < 10 ? '0' : ''}${_b}`;
+    }
+
+    
+
+    document.body.onkeyup = function(e) {
+        	if (e.key === ' ') {
+    		if (id === 0) {
+    			document.body.style.backgroundColor = 'green';
+    			a.innerText = '00:00';
+    			id = setInterval(function() {
+    				time++;
+    				render();
+    			}, 5);
+    		} else {
+    			document.body.style.backgroundColor = 'red';
+    			clearInterval(id);
+    			if (confirm('Do you want to reset?')) {
+    				time = 0;
+    				render();
+    			}
+    			id = 0;
+    		}
+    	}
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<h1>ATM 4</h1>
+	<script type="text/javascript">
+		const CARDS = [
+			{pin: '1234', balance: 5000},
+			{pin: '4321', balance: 15000},
+			{pin: '5555', balance: 0},
+		];
+
+		function getByPin(pin) {
+			let found = null;
+			for (let i = 0; i < CARDS.length; i++) {
+				if (pin === CARDS[i].pin) {
+					found = CARDS[i];
+				}
+			}
+			return found;
+		}
+
+		function cash(found) {
+			let som = +prompt('How much to cash?');
+			som += (som * 5) / 100;
+			if (som > found.balance) {
+				console.log('Недостаточно средств!');
+			} else {
+				found.balance -= som;
+				console.log(`Остаток: ${found.balance} сом.`);
+				if (confirm(`Продолжить?`)) {
+					cash(found);
+				} else {
+					console.log(`Спасибо! Возмите вашу карту!`);
+				}
+			}
+		}
+
+		function requestAttempt(g) {
+			const found = getByPin(prompt(`Ваш pin?`));
+
+			if (found) {
+				console.log(`Ваш баланс: ${found.balance} сом.`);
+				cash(found);
+			} else {
+				if (g === 3) {
+					console.log('Card is blocked!');
+				} else {
+					console.log('Неверный PIN!');
+					console.log(`${3 - g} attempt${3 - g > 1 ? 's' : ''} left.`);
+					requestAttempt(g + 1);
+				}
+			}
+		}
+
+		requestAttempt(1);
+	</script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+	<title></title>
+	<style type="text/css">
+		body {
+			margin: 0;
+		}
+
+		.center-box {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			height: 100vh;
+		}
+
+		.traffic-light {
+			background-color: black;
+			display: inline-block;
+			padding: 15px;
+			border-radius: 20px;
+		}
+
+		.red {
+			background-color: red;
+			border: 1px solid red;
+		}
+
+		.yellow {
+			margin-top: 15px;
+			margin-bottom: 15px;
+			border: 1px solid yellow;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.green {
+			background-color: green;
+			border: 1px solid green;
+		}
+
+		.light {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			transition: .3s;
+		}
+
+		span {
+			font-size: 100px;
+			color: yellow;
+			font-family: 'Electrolize', sans-serif;
+		}
+
+		#onfoot {
+			width: 100px;
+			height: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50px;
+			font-size: 30px;
+			background-color: #F25757;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div class="center-box">
+		<div class="traffic-light">
+			<div id="red1" style="background-color: black;" class="red light"></div>
+			<div id="yellow1" class="yellow light">
+				<span id="timer1">15</span>
+			</div>
+			<div id="green1" class="green light"></div>
+		</div>
+		<div class="traffic-light">
+			<div id="red2" class="red light"></div>
+			<div id="yellow2" class="yellow light">
+				<span id="timer2">15</span>
+			</div>
+			<div id="green2" style="background-color: black;" class="green light"></div>
+		</div>
+		<button id="onfoot">On foot</button>
+	</div>
+	
+	<script type="text/javascript">
+		const red1 = document.getElementById('red1')
+		const red2 = document.getElementById('red2')
+		const green1 = document.getElementById('green1')
+		const green2 = document.getElementById('green2')
+		const timer1 = document.getElementById('timer1')
+		const timer2 = document.getElementById('timer2')
+		const yellow1 = document.getElementById('yellow1')
+		const yellow2 = document.getElementById('yellow2')
+
+		let active = 2
+
+		function timer() {
+			timer1.innerText--
+			if (timer1.innerText < 0) {
+				timer1.innerText = '15'
+			}
+
+			timer2.innerText--
+			if (timer2.innerText < 0) {
+				timer2.innerText = '15'
+			}
+		}
+
+		function setActive(n) {
+			if (n === 1) {
+				red1.style.backgroundColor = 'black'
+				green1.style.backgroundColor = 'green'
+			} else if (n === 2) {
+				red2.style.backgroundColor = 'black'
+				green2.style.backgroundColor = 'green'
+			}
+		}
+
+		function setInactive(n) {
+			if (n === 1) {
+				red1.style.backgroundColor = 'red'
+				green1.style.backgroundColor = 'black'
+			} else if (n === 2) {
+				red2.style.backgroundColor = 'red'
+				green2.style.backgroundColor = 'black'
+			}
+		}
+
+		function _switch() {
+			setActive(active)
+			setInactive(active === 1 ? 2 : 1)
+			active = active === 1 ? 2 : 1
+		}
+
+		function interval() {
+			yellow1.style.backgroundColor = 'yellow'
+			yellow2.style.backgroundColor = 'yellow'
+			timer1.style.color = 'black'
+			timer2.style.color = 'black'
+			setTimeout(() => {
+				yellow1.style.backgroundColor = 'black'
+				yellow2.style.backgroundColor = 'black'
+				timer1.style.color = 'yellow'
+				timer2.style.color = 'yellow'
+			}, 500)
+		}
+
+		onfoot.onclick = () => {
+			setInactive(1)
+			setInactive(2)
+			timer1.innerText = '10'
+			timer2.innerText = '10'
+		}
+
+		setInterval(() => {
+
+			timer()
+
+			if (timer1.innerText === '0') {
+				_switch()
+			}
+
+			if (timer1.innerText <= 5) {
+				interval()
+			}
+
+		}, 1000)
+	</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    body {
+      background-color: #eee;
+    }
+
+    .title {
+      font-size: 42px;
+      text-align: center;
+    }
+
+    .list {
+      border: 2px solid green;
+      height: 220px;
+      padding: 10px;
+    }
+
+    .item {
+      position: relative;
+      height: 200px;
+      width: 300px;
+      overflow: hidden;
+      float: left;
+      margin: 10px;
+      border: 2px solid blue;
+      transition: border-radius .3s;
+    }
+
+    .item:hover > .t {
+      right: 10px;
+      bottom: 10px;
+    }
+
+    .item:hover > img {
+      height: 120%;
+    }
+
+    .item:hover {
+      border-radius: 20px;
+    }
+
+    .item > img {
+      position: absolute;
+      transition: height .8s;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+
+    .item > .t {
+      transition: right .5s, bottom .5s;
+      right: -100px;
+      bottom: -100px;
+      position: absolute;
+      max-width: 70%;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+    }
+  </style>
+  <title></title>
+</head>
+<body>
+  <div class="title">Breaking news</div>
+  <div class="list">
+    <div class="item">
+      <img src="https://cdn.cnn.com/cnnnext/dam/assets/190930154134-03-trump-0930-large-tease.jpg">
+      <span class="t">Trump brands impeachment inquiry a 'coup' as troubles mount</span>
+    </div>
+    <div class="item">
+      <img src="https://cdn.cnn.com/cnnnext/dam/assets/191002114202-02-boris-johnson-1002-medium-tease.jpg">
+      <span class="t">Boris Johnson makes questionable £1 billion claim</span>
+    </div>
+  </div>
+</body>
+</html>

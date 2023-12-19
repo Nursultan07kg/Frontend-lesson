@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		const pn = prompt('Phone number?');
+		const code = +(pn[1] + pn[2] + pn[3]);
+
+		if (
+			(code >= 770 && code <= 779) ||
+			(code >= 220 && code <= 229)
+		) {
+			console.log('Beeline');
+		} else if (
+			(code >= 550 && code <= 559) ||
+			code === 755 ||
+			code === 999
+		) {
+			console.log('MegaCom');
+		} else if (
+			(code >= 700 && code <= 709) ||
+			(code >= 500 && code <= 509)
+		) {
+			console.log('O!');
+		} else {
+			console.log('Unknown operator!');
+		}
+	</script>
+</body>
+</html>

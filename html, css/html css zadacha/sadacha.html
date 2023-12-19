@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Войти</title>
+</head>
+<body>
+  <center>
+    <h1>Войти</h1>
+    <div><input type="text" name="" placeholder="Login"></div>
+    <div><input type="password" name="" placeholder="Password"></div>
+    <div><label><input type="checkbox" name=""> Remember me</label></div>
+    <div><button disabled>Sign in</button></div>
+    <div>
+      <p>Don't you have an account yet? Create it todey for free!</p>
+      <a href="register.html">Register</a>
+    </div>
+  </center>
+  <script type="text/javascript" src="common.js"></script>
+  <script type="text/javascript">
+    const login = getElement('input', 0);
+    const password = getElement('input', 1);
+    const remember_me = getElement('input', 2);
+    const button = getElement('button', 0);
+
+    let user_login = getData('login');
+    let user_password = getData('password');
+
+    if (user_login && user_password && checkUser(user_login, user_password)) {
+      location.href = 'profile.html';
+    }
+
+    login.onkeyup = function(){
+      button.disabled = login.value.length == 0 || password.value.length == 0;
+    }
+
+    password.onkeyup = function(){
+      button.disabled = login.value.length == 0 || password.value.length == 0;
+    }
+
+    button.onclick = function(){
+      let found_user = checkUser(login.value, password.value);
+      clearStorage();
+      if (found_user){
+        saveUser(found_user, remember_me.checked ? localStorage : sessionStorage);
+        alert(`Welcome, ${login.value}!`);
+        location.href = 'profile.html';
+      } else {
+        alert('Wrong login or password!');
+      }
+    }
+  </script>
+</body>
+</html>

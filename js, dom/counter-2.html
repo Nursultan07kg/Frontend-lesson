@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div {
+			display: inline-block;
+			position: relative;
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			border-radius: 100px;
+			cursor: pointer;
+		}
+
+		span {
+			color: white;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 100px;
+		}
+
+		.plus {
+			background-color: green;
+		}
+
+		.number span {
+			color: black;
+			font-size: 150px;
+		}
+
+		.minus {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="plus">
+		<span>+</span>
+	</div>
+	<div class="number">
+		<span>0</span>
+	</div>
+	<div class="minus">
+		<span>-</span>
+	</div>
+	<script type="text/javascript">
+		const plus = document.body.children[0];
+		const number = document.body.children[1];
+		const minus = document.body.children[2];
+
+		plus.onclick = function() {
+			number.children[0].innerText++;
+			if (number.children[0].innerText == 1) {
+				number.children[0].style.color = 'green';
+			} else if (number.children[0].innerText == 0) {
+				number.children[0].style.color = 'black';
+			}
+		};
+
+		minus.onclick = function() {
+			number.children[0].innerText--;
+			if (number.children[0].innerText == -1) {
+				number.children[0].style.color = 'red';
+			} else if (number.children[0].innerText == 0) {
+				number.children[0].style.color = 'black';
+			}
+		};
+	</script>
+</body>
+</html>

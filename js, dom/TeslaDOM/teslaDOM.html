@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Choose your dream Tesla</title>
+	<style type="text/css">
+		.img{
+			margin: auto;
+			width: 80vw;
+			height: 60vh;
+			background-image: url(tes1.jpeg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			transition: 1s;
+		}
+		.control{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.a{
+			width: 50px;
+			height: 50px;
+			margin: 5px;
+			border-radius: 50%;
+			padding: 4px;
+			background-size: contain;
+			background-origin: content-box;
+			background-repeat: no-repeat;
+			border: 5px solid white;
+			transition: .6s;
+		}
+		.active{
+			border: 5px solid #3e6ae1;
+		}
+		.whi{
+			background-image: url(whitevek.jpg);
+		}
+		.black{
+			background-image: url(blackvek.jpg);
+		}
+		.grey{
+			background-image: url(greyvek.jpg);
+		}
+		.red{
+			background-image: url(redvek.jpg);
+		}
+		.blue{
+			background-image: url(bluevek.jpg);
+		}
+	</style>
+</head>
+<body>
+	<h1 align="center">Choose your dream Tesla</h1>
+	<div>
+		<div id="image" class="img"></div>
+		<div class="control">
+			<div id="col1" class="a whi active"></div>
+			<div id="col2" class="a black"></div>
+			<div id="col3" class="a grey"></div>
+			<div id="col4" class="a red"></div>
+			<div id="col5" class="a blue"></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		const img = document.getElementById('image')
+		const col1 = document.getElementById('col1')
+		const col2 = document.getElementById('col2')
+		const col3 = document.getElementById('col3')
+		const col4 = document.getElementById('col4')
+		const col5 = document.getElementById('col5')
+
+		function perwhi() {
+			img.style.backgroundImage = `url(tes1.jpeg)`
+			col1.className = 'a whi active'
+			col2.className = 'a black'
+			col3.className = 'a grey'
+			col4.className = 'a red'
+			col5.className = 'a blue'
+		}
+
+		function perbl() {
+			img.style.backgroundImage = `url(tes2.jpeg)`
+			col1.className = 'a whi'
+			col2.className = 'a black active'
+			col3.className = 'a grey'
+			col4.className = 'a red'
+			col5.className = 'a blue'
+		}
+
+		function pergr() {
+			img.style.backgroundImage = `url(tes3.jpeg)`
+			col1.className = 'a whi'
+			col2.className = 'a black'
+			col3.className = 'a grey active'
+			col4.className = 'a red'
+			col5.className = 'a blue'
+		}
+		function perred() {
+			img.style.backgroundImage = `url(tes5.jpeg)`
+			col1.className = 'a whi'
+			col2.className = 'a black'
+			col3.className = 'a grey'
+			col4.className = 'a red active'
+			col5.className = 'a blue'
+		}
+		function perblu() {
+			img.style.backgroundImage = `url(tes4.jpeg)`
+			col1.className = 'a whi'
+			col2.className = 'a black'
+			col3.className = 'a grey'
+			col4.className = 'a red'
+			col5.className = 'a blue active'
+		}
+
+		col1.onclick = perwhi
+		col2.onclick = perbl
+		col3.onclick = pergr
+		col4.onclick = perred
+		col5.onclick = perblu
+	</script>
+</body>
+</html>

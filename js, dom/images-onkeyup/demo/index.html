@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+		<input id="input" type="text">
+		<button id="button">Show</button>
+	</div>
+	<h1 align="center" id="h1"></h1>
+	<img src="" style="width: 300px;" id="img">
+	<script type="text/javascript">
+		const images = {
+			'кошка': 'https://icdn.lenta.ru/images/2020/08/08/13/20200808131211392/square_1280_7efc59cef497ea4709ca7c66021763cb.jpg',
+			'собака': 'https://ichef.bbci.co.uk/news/640/cpsprodpb/475B/production/_98776281_gettyimages-521697453.jpg',
+			'ноутбук': 'https://mobile-review.com/articles/2020/image/echo-102/pic/4.jpg',
+			'телефон': 'https://www.ixbt.com/img/n1/news/2020/9/4/s-l1600_large.png',
+			'tesla': 'https://www.ixbt.com/img/n1/news/2021/5/3/maxresdefault_0_large.png',
+			'mercedes': 'https://lh3.googleusercontent.com/proxy/tELUz4UjB-eo_ZYlW9v3_emE3_HVuj47onh87tg416zbUhtELoNCQ8BvdS2vAp04SunpbMmn1qDjvEXYz742d6y9VQc',
+		};
+		const img = document.getElementById('img');
+		const button = document.getElementById('button');
+		const input = document.getElementById('input');
+		const h1 = document.getElementById('h1');
+
+
+		function show() {
+			if (input.value in images) {
+				img.src = images[input.value];
+				h1.innerText = input.value;
+			} else {
+				img.src = 'https://thumbs.dreamstime.com/b/%D0%BF%D0%BE%D0%BA%D0%B0%D0%B7%D1%8B%D0%B2%D0%B0%D1%82%D1%8C-oops-%D0%BA-%D1%81%D0%BE%D0%B6%D0%B0%D0%BB%D0%B5%D0%BD%D0%B8%D1%8E-%D0%B8%D0%BB%D0%B8-%D1%8F-%D0%BD%D0%B5-%D0%B7%D0%BD%D0%B0%D1%8E-%D0%BF%D0%BE%D0%B6%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BF%D0%BB%D0%B5%D1%87%D0%B0%D0%BC%D0%B8-%D0%B8-106531887.jpg';
+			}
+		}
+
+		button.onclick = show;
+		input.onkeyup = function(e) {
+			if (e.keyCode === 13) {
+				show();
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>iStore - мобильные телефоны и аксессуары в Кыргызстане</title>
+    <meta charset="utf-8">
+  <style type="text/css">
+    @keyframes logo {
+    0% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes site-title {
+    0% {
+        text-shadow: 0px 0px 5px white;
+    }
+    50% {
+        text-shadow: 5px 5px 10px white;
+    }
+    100% {
+        text-shadow: 0px 0px 5px white;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    background-color: #0D47A1;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    text-align: center;
+}
+
+.header > img {
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 100%;
+    animation-name: logo;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.header > div {
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 5px white;
+    line-height: 100%;
+    font-family: 'Abril Fatface', cursive;
+    animation-name: site-title;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.header > span {
+    padding: 10px;
+    color: white;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.content {
+    max-width: 900px;
+    margin: 20px;
+}
+
+.content > input {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.content > a > img {
+    width: 100%;
+}
+
+.categories {
+    background-color: #eee;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.categories > a {
+    display: inline-block;
+    text-decoration: none;
+    width: 19%;
+    background-color: white;
+    padding: 20px 0px;
+    margin: 2px 0px;
+    transition: border-radius .6s;
+}
+
+.categories > a:hover {
+    border-radius: 20px;
+}
+
+.categories > a > img {
+    max-height: 200px;
+}
+
+.categories > a > div {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.product {
+    background-color: white;
+    border: 5px solid #eee;
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+    border-radius: 10px;
+    width: 210px;
+    height: 338px;
+}
+
+.product > .img {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.product > .img > img {
+    width: 200px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    transition: top .6s, left .6s, width .6s;
+}
+
+.product:hover > .img > img {
+    width: 160px;
+    top: 25px;
+    left: 25px;
+}
+
+.product > .price {
+    font-size: 18px;
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.product > .buy {
+    padding: 8px;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    background-color: #2196f3;
+}
+
+.footer {
+    background-color: #0D47A1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+  </style>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <img src="https://st2.depositphotos.com/3102403/11122/v/950/depositphotos_111225890-stock-illustration-mobile-phone-landing-page-flat.jpg">
+        <div>iStore</div>
+        <span>Мобильные телефоны и аксессуары в Кыргызстане</span>
+    </div>
+    <center>
+        <div class="content">
+            <input type="text" name="search" placeholder="Поиск...">
+            <div class="categories">
+                <a href="">
+                    <img src="https://ostore.kg/upload/resize_cache/iblock/0f2/140_100_1/Apple.png">
+                    <div>Apple</div>
+                </a>
+                <a href="">
+                    <img src="https://ostore.kg/upload/resize_cache/iblock/da4/140_100_1/Realme1.jpg">
+                    <div>Samsung</div>
+                </a>
+                <a href="">
+                    <img src="https://ostore.kg/upload/resize_cache/iblock/6b7/140_100_1/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA.JPG">
+                    <div>Huawei</div>
+                </a>
+                <a href="">
+                    <img src="https://ostore.kg/upload/resize_cache/iblock/4e1/140_100_1/Xiaomi.png">
+                    <div>Xiaomi</div>
+                </a>
+                <a href="">
+                    <img src="https://ostore.kg/upload/resize_cache/iblock/a11/140_100_1/honor_v30_pro_new-1024x768_large.jpg">
+                    <div>Honor</div>
+                </a>
+            </div>
+            <a href="https://honor.ru"><img src="https://gizchina.it/wp-content/uploads/2018/04/honor-7c-ufficiale-italia-banner-1200x675.jpg"></a>
+            <div class="products">
+                <div class="product">
+                    <div class="img">
+                        <img src="https://svetofor.info/images/detailed/181/smartfon-apple-iphone-11-128-gb-ram-4-gb-dual-sim-chernyj.jpg">
+                    </div>
+                    <div>Apple IPhone 11 4/128GB Dual SIM (черный)</div>
+                    <div class="price">61 800 <u>c</u></div>
+                    <button class="buy">Купить</button>
+                </div>
+                <div class="product">
+                    <div class="img">
+                        <img src="https://object.pscloud.io/cms/cms/Photo/img_0_77_2255_2_320.webp">
+                    </div>
+                    <div>Xiaomi Redmi Note 8 Pro 6/128Гб EU (белый)</div>
+                    <div class="price">17 250 <u>c</u></div>
+                    <button class="buy">Купить</button>
+                </div>
+                <div class="product">
+                    <div class="img">
+                        <img src="https://svetofor.info/images/thumbnails/300/300/detailed/214/smartfon-xiaomi-poco-m3-64-gb-ram-4-gb-black.jpg">
+                    </div>
+                    <div>Смартфон Xiaomi POCO M3 64 Gb (RAM 4 Gb) yellow</div>
+                    <div class="price">13 500 <u>c</u></div>
+                    <button class="buy">Купить</button>
+                </div>
+                <div class="product">
+                    <div class="img">
+                        <img src="https://svetofor.info/images/thumbnails/300/300/detailed/84/xiaomi-bluetooth-garniture-gray.jpg">
+                    </div>
+                    <div>Bluetooth колонка Xiaomi Mi BT Speaker 2</div>
+                    <div class="price">1 550 <u>c</u></div>
+                    <button class="buy">Купить</button>
+                </div>
+                <div class="product">
+                    <div class="img">
+                        <img src="https://svetofor.info/images/thumbnails/300/300/detailed/97/product-112457.jpg">
+                    </div>
+                    <div>Наушники Somic P6 оранжевые</div>
+                    <div class="price">1 250 <u>c</u></div>
+                    <button class="buy">Купить</button>
+                </div>
+                <div class="product">
+                    <div class="img">
+                        <img src="https://svetofor.info/images/thumbnails/300/300/detailed/97/naushniki-xiaomi-in-ear-qtej02jy-serebristye.jpg">
+                    </div>
+                    <div>Наушники Xiaomi In-Ear (QTEJ02JY) серебристые</div>
+                    <div class="price">700 <u>c</u></div>
+                    <button class="buy">Купить</button>
+                </div>
+            </div>
+        </div>
+    </center>
+    <div class="footer">&copy; Интернет Магазин - iStore <strong>2021</strong> by Besoft Teach students</div>
+</body>
+</html>

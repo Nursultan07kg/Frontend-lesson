@@ -1,0 +1,86 @@
+.display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dis {
+  height: 100vh;
+  width: 85%;
+  display: flex;
+  align-items: center;
+}
+
+.car {
+  width: 1000px;
+  height: 480px;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  padding-left: 10%;
+
+}
+
+.img {
+  width: 1000px;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 1s;
+}
+
+.select {
+  width: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*flex-direction: column;*/
+  align-content: space-around;
+}
+
+.fon {
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 5px solid white;
+  padding: 5px;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+
+.active {
+  border: 5px solid rgba(5, 0, 255, 0.74) !important;
+}
+
+.fon2 {
+  width: 70px;
+  height: 70px;
+  background-size: 80px;
+  background-position: center;
+  border-radius: 50%;
+  transform: scale(1);
+}
+
+.f1 {
+  background-image: url("Assets/whitevek.jpg");
+}
+
+.f2 {
+  background-image: url("Assets/blackvek.jpg");
+}
+
+.f3 {
+  background-image: url("Assets/greyvek.jpg");
+}
+
+.f4 {
+  background-image: url("Assets/bluevek.jpg");
+}
+
+.f5 {
+  background-image: url("Assets/redvek.jpg");
+}

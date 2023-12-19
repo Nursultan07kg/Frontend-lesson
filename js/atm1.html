@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<h1>ATM 1</h1>
+	<script type="text/javascript">
+		const CARDS = [
+			{pin: '1234', balance: 5000},
+			{pin: '4321', balance: 15000},
+			{pin: '5555', balance: 0},
+		];
+
+		const PIN = prompt('Your pin?');
+		let found = null;
+
+		for (let i = 0; i < CARDS.length; i++) {
+			if (PIN === CARDS[i].pin) {
+				found = CARDS[i];
+			}
+		}
+
+		if (found) {
+			console.log(`Balance: ${found.balance} som.`);
+		} else {
+			console.log('Incorrect PIN!');
+		}
+	</script>
+</body>
+</html>

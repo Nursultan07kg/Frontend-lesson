@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		h1 {
+			padding: 50px
+			margin: 50px;
+			font-size: 200px;
+			color: white;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>10</h1>
+	<script type="text/javascript">
+		const body = document.body;
+		const h1 = body.children[0];
+
+		let i = 10;
+
+		setInterval(function(){
+			if (i >= 7) {
+				body.style.backgroundColor = 'green';
+			} else if (i < 7 && i >= 4) {
+				body.style.backgroundColor = 'blue';
+			} else if (i < 4 && i > 0) {
+				body.style.backgroundColor = 'red';
+			} else {
+				body.style.backgroundColor = 'black';
+			}
+			h1.innerText = i;
+			i--;
+			if (i < 0) {
+				i = 10;
+			}
+		}, 500);
+	</script>
+</body>
+</html>

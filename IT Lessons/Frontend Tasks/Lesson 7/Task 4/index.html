@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+    .t, .c, .p {
+      display: none;
+    }
+
+    @media screen and (max-width: 200px) {
+      .t {
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 200px) and (max-width: 400px) {
+      .p {
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 400px) {
+      .c {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="c">Компьютер</h1>
+  <h1 class="p">Планшет</h1>
+  <h1 class="t">Телефон</h1>
+</body>
+</html>

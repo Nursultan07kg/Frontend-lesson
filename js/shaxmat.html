@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	let number = prompt('number');
+	let residue = number % 2;
+
+	if(number <= 8 && number >= 1){
+		let title = prompt('title');
+		let letter = title == 'A' || title == 'C' || title == 'E' || title =='G';
+
+		if(residue == 0 && letter){
+
+		alert('ak:  ' + number+title)
+		
+		}else if(residue == 0) {
+
+			alert("kara:  " + number+title)
+
+		}else if(residue == 1 && letter){
+
+			alert('kara:  ' + number+title)
+
+		}else if(residue == 0) {
+
+			alert("ak  " + number+title)
+		}
+	}else{
+		alert('tuura number jaz')
+	}
+	</script>
+</body>
+</html>

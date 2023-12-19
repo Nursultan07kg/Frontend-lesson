@@ -1,0 +1,65 @@
+		.img1{
+			animation-name: img;
+			animation-duration: 2s;
+			position: absolute;
+			left: 210px;
+			top: 7px;
+		}
+		@keyframes img{
+			from{
+				left: -100%;
+			}
+			to{
+				left: 210px;
+			}
+		}
+		.img2{
+			animation-name: imgg;
+			animation-duration: 3s;
+			position: absolute;
+			top:7px;		
+		}
+		@keyframes imgg{
+			from{
+				top: -100%;
+			}
+			to{
+				top: 7px;
+			}
+		}
+			.img3{
+				animation-name: b;
+				animation-duration: 4s;
+
+				position: absolute;
+				bottom: 25px;
+				right: 212px;	
+			}
+			@keyframes b{
+				from{
+					bottom: -100%;
+					right: -100px;
+				}
+				to{
+					right: 212px;
+					bottom: 25px;
+				}
+			}
+			.img4{
+				animation-name: a;
+				animation-duration: 4s;
+				position: absolute;
+				left: 210px;
+				bottom: 25px;
+			}
+			@keyframes a{
+				from{
+					bottom: -100%;
+					left: -100px;
+				}
+				to{
+					left: 210px;
+					bottom: 25px;
+				}
+			}
+		}

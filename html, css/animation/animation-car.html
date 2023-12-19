@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    @keyframes mymove {
+      0% {
+        transform: rotate(0deg);
+        left: 0px;
+      }
+      25% {
+        transform: rotate(20deg);
+        left: 0px;
+      }
+      50% {
+        transform: rotate(0deg);
+        left: 700px;
+      }
+      55% {
+        transform: rotate(0deg);
+        left: 700px;
+      }
+      70% {
+        transform: rotate(0deg);
+        left: 700px;
+      }
+      100% {
+        transform: rotate(-360deg);
+        left: 0px;
+      }
+    }
+
+    .box {
+      position: absolute;
+      width: 200px;
+      animation-name: mymove;
+      animation-duration: 4s;
+      padding: 70px;
+      background-color: black;
+      animation-iteration-count: infinite;
+      border-radius: 100%;
+    }
+  </style>
+  <title></title>
+</head>
+<body style="margin: 100px;">
+  <div style="position: relative;">
+    <div class="box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR18UvMwJkPPqt0zPsD87aJA2Gmmm0pfxcPzNclRJBg3I_OqWCW&usqp=CAU">
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.wrapper{
+			margin: 150px auto;
+		    width: 200px;
+		    height: 200px;
+		    border-radius: 50%;
+		    border: 1px solid blue;
+		}
+		.rotate{
+			position: relative;
+		    width: 200px;
+		    height: 200px;
+		    /*background: red;*/
+		    animation-name: anim1;
+		    animation-duration: 8s;
+		    animation-timing-function: linear;
+		    animation-iteration-count: infinite;
+		}
+		.ball{
+			position: absolute;
+		    top: -50px;
+		    left: -50px;
+		    width: 50px;
+		    height: 50px;
+		    border-radius: 25px;
+		    border: 1px solid grey;
+		    animation-name: anim2;
+		    animation-duration: 8s;
+		    animation-iteration-count: infinite;
+		}
+		@keyframes anim1{
+			0% {
+			    transform: rotate(0deg);
+			}
+			100% {
+			    transform: rotate(360deg);
+			}
+		}
+		@keyframes anim2{
+			0% {
+			    background: lightgrey;
+			}
+			10% {
+			    background: yellow;
+			}
+			30%{
+				background: orange;
+			}
+			60%{
+				background: orangered;
+			}
+			80%{
+				background: gray;
+			}
+			100% {
+			    background: lightgrey;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="rotate">
+			<div class="ball"></div>
+		</div>
+	</div>
+</body>
+</html>

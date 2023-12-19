@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .a {
+    border-top-left-radius: 100%;
+  }
+  
+  .b {
+    border-top-right-radius: 100%;
+  }
+  
+  .c {
+    border-bottom-left-radius: 100%;
+  }
+  
+  .d {
+    border-bottom-right-radius: 100%;
+  }
+
+  img {
+  	transition: .5s border-radius;
+  	width: 200px;
+  	height: 200px;
+  }
+
+  img:hover {
+  	border-radius: 0px;
+  }
+
+  div {
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  }
+</style>
+</head>
+<body>
+  <div>
+  		<img class="a" src="https://images.fineartamerica.com/images-medium-large/nature-square--saddleback-dragonfly-carol-groenen.jpg" />
+	  	<img class="b" src="https://i.ytimg.com/vi/TZrrG_XD3eQ/hqdefault.jpg" />
+	  	<br />
+	  	<img class="c" src="https://upload.wikimedia.org/wikipedia/commons/6/66/Square_Panorama_of_Aru_Valley%2C_Jammu_and_Kashmir%2C_India.jpg" />
+	  	<img class="d" src="https://images.fineartamerica.com/images-medium-large-5/sunflower-abstract-by-nature-square-lee-craig.jpg" />
+  </div>
+</body>
+</html>

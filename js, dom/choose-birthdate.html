@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		body {
+			background-color: #2e7d32;
+			height: 100vh;
+			color: #2e7d32;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.container {
+			text-align: center;
+			width: 50vw;
+			background-color: white;
+			padding: 20px;
+		}
+
+		select {
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid #2e7d32;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Дата рождения</h1>
+		<div>
+			<select style="display: none;" id="year"></select>
+			<select id="month"></select>
+			<select id="day"></select>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const MONTH = [
+			{name: 'январь', days: 31},
+			{name: 'февраль', days: 28},
+			{name: 'март', days: 31},
+			{name: 'апрель', days: 30},
+			{name: 'май', days: 31},
+			{name: 'июнь', days: 31},
+			{name: 'июль', days: 30},
+			{name: 'август', days: 31},
+		];
+
+		for (let i = 2022; i >= 1900; i--) {
+			year.innerHTML += `<option value="${i}">${i}</option>`;
+		}
+
+		for (let i = 1; i <= MONTH.length; i++) {
+			month.innerHTML += `<option value="${i}">${MONTH[i-1].name}</option>`;
+		}
+
+		function onSelectMonth(g) {
+			day.innerHTML = '';
+			for (let i = 1; i <= g.days; i++) {
+				day.innerHTML += `<option value="${i}">${i}</option>`;
+			}
+			day.value = '1';
+		}
+
+		onSelectMonth(MONTH[0]);
+
+		month.onchange = function() {
+			onSelectMonth(MONTH[month.value - 1]);
+		};
+	</script>
+</body>
+</html>

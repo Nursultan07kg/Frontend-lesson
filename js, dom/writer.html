@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+    body {
+      height:  100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #E5D9F2;
+    }
+
+    p {
+      display: inline-block;
+      font-size: 90px;
+      background-color: #7371FC;
+      color: #F5EFFF;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: #7371FC;
+      text-shadow: 1px 1px 3px white;
+    }
+  </style>
+</head>
+<body>
+  <h1>JS text writer (DOM)</h1>
+  <p></p>
+  <script type="text/javascript">
+    let index = 0;
+    let text = 'Hello from JavaScript!';
+    setInterval(() => {
+      if (index == 0) document.getElementsByTagName('p')[0].innerHTML = '';
+      document.getElementsByTagName('p')[0].innerHTML += text[index];
+      index++;
+      if (index == text.length) index = 0;
+    }, 120);
+  </script>
+</body>
+</html>

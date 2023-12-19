@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<h1>ATM 3</h1>
+	<script type="text/javascript">
+		const CARDS = [
+			{pin: '1234', balance: 5000},
+			{pin: '4321', balance: 15000},
+			{pin: '5555', balance: 0},
+		];
+
+		for (let g = 0; g < 3; g++) {
+			const PIN = prompt(`Ваш pin?`);
+			let found = null;
+
+			for (let i = 0; i < CARDS.length; i++) {
+				if (PIN === CARDS[i].pin) {
+					found = CARDS[i];
+					g = 3;
+				}
+			}
+
+			if (found) {
+				console.log(`Ваш баланс: ${found.balance} сом.`);
+				let som = +prompt('How much to cash?');
+				som = ((som * 5) / 100) + som;
+				if (som > found.balance) {
+					console.log('Недостаточно средств!');
+				} else {
+					found.balance -= som;
+					console.log(`Остаток: ${found.balance} сом.`);
+				}
+			} else {
+				if (g === 2) {
+					console.log('Card is blocked!');
+				} else {
+					console.log('Неверный PIN!');
+					console.log(`${2 - g} attempt${2 - g > 1 ? 's' : ''} left.`);
+				}
+			}
+		}
+	</script>
+</body>
+</html>

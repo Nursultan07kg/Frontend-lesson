@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style type="text/css">
+		.phone{
+			width: 270px;
+			padding: 25px 12px;
+			background-color: rgba(32, 32, 32, 0.9);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		.stories{
+			width: 270px;
+			height: 440px;
+			background-image: url(https://i.pinimg.com/originals/d6/03/16/d603160611b69e2ec9f018a8365efed6.jpg);
+			border-radius: 15px;
+			background-size: cover;
+			background-position: center;
+			display: flex;
+			transition: 1s;
+		}
+		.s{
+			width: 35%;
+			height: 5px;
+			position: absolute;
+			bottom: 10px;
+			border-radius: 5px;
+			background-color: lightgrey;
+		}
+		.wid{
+			width: 50%;
+			height: 100%;
+			padding-top: 10px;
+			display: flex;
+			justify-content: center;
+		}
+		.pol{
+			width: 90%;
+			height: 4px;
+			border-radius: 2px;
+		}
+	</style>
+</head>
+<body>
+	<div class="phone">
+		<div id="srs" class="stories">
+			<div id="pre" class="wid">
+				<div id="panel" class="pol" style="background-color: lightgrey;"></div>
+			</div>
+			<div id="nxt" class="wid">
+				<div id="panel2" class="pol" style="background-color: grey;"></div>
+			</div>
+		</div>
+		<div class="s"></div>
+	</div>
+
+	<script type="text/javascript">
+		const srs = document.getElementById('srs')
+		const prev = document.getElementById('pre')
+		const nxt = document.getElementById('nxt')
+		const pn1 = document.getElementById('panel')
+		const pn2 = document.getElementById('panel2')
+		console.log(srs)
+
+		function prv() {
+			srs.style.backgroundImage = `url(https://i.pinimg.com/originals/d6/03/16/d603160611b69e2ec9f018a8365efed6.jpg)`
+			pn1.style.backgroundColor = 'lightgrey'
+			pn2.style.backgroundColor = 'grey'
+		}
+		
+		function next() {
+			srs.style.backgroundImage = `url(https://i.pinimg.com/originals/13/e7/ae/13e7ae7ecdf19fa4aedfb7aa5439f58b.jpg)`
+			pn2.style.backgroundColor = 'lightgrey'
+			pn1.style.backgroundColor = 'grey'
+		}
+		srs.children[0].onclick = prv
+		srs.children[1].onclick = next
+	</script>
+</body>
+</html>

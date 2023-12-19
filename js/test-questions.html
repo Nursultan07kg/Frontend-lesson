@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let questions = [
+			{
+				text: 'President of the Kyrgyz Republic?',
+				answer: 'Japarov',
+			},
+			{
+				text: 'President of the USA?',
+				answer: 'Bayden',
+			},
+			{
+				text: 'President of the KZ?',
+				answer: 'Tokoev',
+			},
+			{
+				text: 'What is Frontend?',
+				answer: 'Web',
+			}
+		];
+
+
+
+
+
+
+
+
+
+
+
+		let a = 0;
+
+		for (let i = 0; i < questions.length; i++) {
+			const answer = prompt(`${questions[i].text}?`);
+			if (questions[i].answer === answer) {
+				a++;
+			}
+		}
+
+		console.log(`Правильные ответы: ${a}/${questions.length}`);
+	</script>
+</body>
+</html>

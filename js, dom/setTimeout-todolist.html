@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<div id="error" style="position: absolute; bottom: -60px; transition: 1s; left: 50%; transform: translateX(-50%); color: white; border-top-left-radius: 20px; border-top-right-radius: 20px; padding: 10px; background-color: red; font-size: 30px; margin: auto;">Напишите что-нибудь!</div>
+	<h1>Todo list(<span id="counter">0</span>)</h1>
+	<div>
+		<input type="text" id="inp" name=""> <button id="btn">Добавить</button>
+	</div>
+	<ul id="list"></ul>
+	<script type="text/javascript">
+		let total = 0;
+
+		btn.onclick = function() {
+			if (inp.value === '') {
+				error.style.bottom = '0px';
+				btn.disabled = true;
+				setTimeout(function() {
+					error.style.bottom = '-60px';
+					btn.disabled = false;
+				}, 1000);
+				return;
+			}
+
+			total += 1;
+			list.innerHTML += `<li>${inp.value}</li>`;
+			counter.innerText = total;
+			inp.value = '';
+		}
+	</script>
+</body>
+</html>

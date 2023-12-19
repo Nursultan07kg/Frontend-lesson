@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div id="div" style="display: flex; flex-wrap: wrap;"></div>
+	<script type="text/javascript">
+		const n = +prompt('N?');
+		const div = document.getElementById('div');
+		let str = '';
+
+		for (let i = 0; i < n; i++) {
+			str += `<div style="border-radius: 100%; display: flex; width: 100px; height: 100px; background-color: black; margin: 10px; color: white; font-size: 50px; align-items: center; justify-content: center;">${i+1}</div>`;
+		}
+
+		div.innerHTML = str;
+	</script>
+</body>
+</html>

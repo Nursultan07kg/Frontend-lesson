@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.container {
+			width: 50%;
+			background-color: white;
+			border: 1px solid green;
+			padding: 10px;
+			transform: translate(-50%, -50%);
+			top: 50%;
+			position: absolute;
+			left: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div id="error" style="position: absolute; bottom: -60px; transition: 1s; left: 50%; transform: translateX(-50%); color: white; border-top-left-radius: 20px; border-top-right-radius: 20px; padding: 10px; background-color: red; font-size: 30px; margin: auto;">Напишите что-нибудь!</div>
+	<div class="container">
+		<div style="display: flex; justify-content: space-between; align-items: center;">
+			<h1>Todo list(<span id="counter">0</span>)</h1>
+			<input type="text" id="fil" placeholder="Поиск">
+		</div>
+		<div>
+			<input type="text" id="inp"> <button id="btn">Добавить</button>
+		</div>
+		<ul id="list"></ul>
+		<h2 id="noresult" style="display: none; color:grey; text-align: center;">No results!</h2>
+	</div>
+	<script type="text/javascript">
+		let items = [];
+
+		fil.oninput = function(e) {
+			const results = items.filter(function(g) {
+				return g.toLowerCase().startsWith(e.target.value.toLowerCase());
+			});
+
+			noresult.style.display = e.target.value !== '' && results.length === 0 ? 'block' : 'none';
+
+			render(results);
+		};
+
+		btn.onclick = function() {
+			if (inp.value === '') {
+				error.style.bottom = '0px';
+				inp.style.border = '1px solid red';
+				btn.disabled = true;
+				setTimeout(function() {
+					error.style.bottom = '-60px';
+					btn.disabled = false;
+					inp.style.border = '1px solid black';
+				}, 1000);
+				return;
+			}
+
+			items.push(inp.value);
+			inp.value = '';
+			fil.value = '';
+			render(items);
+		}
+
+		function render(_items) {
+			list.innerHTML = '';
+			for (let i = 0; i < _items.length; i++) {
+				list.innerHTML += `<li>${_items[i]}</li>`;
+			}
+			counter.innerText = _items.length;
+		}
+	</script>
+</body>
+</html>

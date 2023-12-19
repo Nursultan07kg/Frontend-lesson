@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		h1 {
+			font-size: 100px;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="h1"></h1>
+	<h2 id="h2"></h2>
+	<script type="text/javascript">
+		const text = prompt('Text?');
+
+		for (let i = 0; i < text.length; i++) {
+			h1.innerHTML += `<span>${text[i]}</span>`;
+		}
+
+		let g = 0;
+		let correct = 0;
+
+		document.body.onkeyup = function(e) {
+			if (e.key === 'Backspace') {
+				g--;
+				h1.children[g].style.color = 'black';
+				h2.innerText = '';
+				return;
+			}
+
+			if (e.key === text[g]) {
+				h1.children[g].style.color = 'green';
+				correct++;
+			} else {
+				h1.children[g].style.color = 'red';
+			}
+
+			g++;
+
+			if (g === text.length) {
+				h2.innerText = `Результаты: ${correct}/${text.length}`;
+			}
+		}
+	</script>
+</body>
+</html>
